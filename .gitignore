@@ -1,0 +1,27 @@
+# === CRÍTICO: nunca versionar ===
+Credenciales.txt
+.env
+n8n_data/
+
+# === Sistema operativo ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === IDEs ===
+.idea/
+.vscode/
+# Descomenta la siguiente línea si quieres compartir la config de VSCode con el equipo:
+# !.vscode/settings.json
+
+# === Logs ===
+*.log
+npm-debug.log*
+
+# === Secretos y certificados ===
+*.secret
+*.key
+*.pem
+
+# === Claude Code ===
+.claude/
