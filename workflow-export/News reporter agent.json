@@ -325,8 +325,8 @@
         "rule": {
           "interval": [
             {
-              "field": "hours",
-              "hoursInterval": 4
+              "field": "minutes",
+              "minutesInterval": 1
             }
           ]
         }
@@ -730,7 +730,7 @@
     "errorWorkflow": "9YnUGWp4iWa1nBFq",
     "callerPolicy": "workflowsFromSameOwner"
   },
-  "versionId": "cc8c22d3-4f77-46d7-8816-0bdccdb4ff80",
+  "versionId": "fba480dd-bca7-485b-b34f-b792bf9cde28",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "ae27d58497989ef9381677d8fa4b9c0075d0d46157ace5225e2b75133183b1c6"
