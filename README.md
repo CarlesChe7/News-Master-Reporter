@@ -4,7 +4,11 @@ Agente autónomo que selecciona, redacta e ilustra una noticia cada cuatro horas
 publica en Telegram y WhatsApp sin intervención humana. Construido sobre n8n autoalojado
 con una arquitectura de dos agentes LLM especializados.
 
-![Ejemplo de publicación en Telegram](docs/ejemplo-telegram.jpg)
+<p align="center">
+  <img src="docs/ejemplo-telegram.jpg" alt="Ejemplo de publicación en Telegram" width="360">
+  <br>
+  <em>Publicación generada y enviada automáticamente al canal de Telegram</em>
+</p>
 
 ---
 
