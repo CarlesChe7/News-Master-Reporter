@@ -93,10 +93,6 @@ docker compose up -d
 
 Al acceder por primera vez, n8n pedirá crear un usuario administrador.
 
-> **Nota importante:** la deduplicación usa el sistema de ficheros desde un nodo Code,
-> así que el `.env` debe incluir `NODE_FUNCTION_ALLOW_BUILTIN=fs`. Sin esa variable,
-> n8n bloquea el acceso a `fs` y el nodo de deduplicación falla.
-
 ---
 
 ## Comandos útiles
@@ -128,7 +124,6 @@ News-Master-Reporter/
 ├── README.md
 ├── CLAUDE.md               # Guía operativa para Claude Code
 ├── Prompts.txt             # System prompts de Claude (evaluador + redactor)
-├── Credenciales.txt        # Credenciales locales (NO versionado)
 └── workflow-export/        # Blueprints JSON exportados de n8n
     ├── news-reporter-main.json      # Workflow principal
     └── news-reporter-error.json     # Workflow de gestión de errores
