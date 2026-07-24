@@ -6,7 +6,7 @@ con una arquitectura de dos agentes LLM especializados.
 
 <!-- TODO: sustituir por una captura real de una publicación en Telegram.
      Súbela a docs/ y enlázala aquí. Es lo primero que mira quien abre el repo. -->
-![Ejemplo de publicación en Telegram](docs/ejemplo-telegram.png)
+![Ejemplo de publicación en Telegram](docs/ejemplo-telegram.jpg)
 
 ---
 
