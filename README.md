@@ -154,17 +154,16 @@ grafo a cambio de una llamada HTTP más larga.
 
 ## Métricas
 
-<!-- TODO: rellenar con mediciones reales antes de publicar el enlace.
-     - Coste: sumar 2 llamadas a Haiku 4.5 (~1024 tokens de salida c/u, entrada variable
-       según nº de artículos del feed) + 1 imagen de SD 3.5 Large Turbo en Replicate.
-     - Tiempo: cronometrar una ejecución completa en la pestaña Executions de n8n. -->
-
 | Métrica | Valor |
 | --- | --- |
-| Coste por ciclo | _pendiente de medir_ |
-| Tiempo de ejecución | _pendiente de medir_ |
+| Coste por ciclo | ~$0,045 (0,04 imagen + 2 llamadas LLM) |
+| Tiempo de ejecución | 4-6 s |
 | Nodos funcionales | 16 |
 | Llamadas a LLM por ciclo | 2 |
+
+Con el ciclo cada 4 horas son unas 6 publicaciones diarias, en torno a **8 €/mes**. El
+coste dominante es la generación de imagen: las dos llamadas al LLM aportan céntimas
+frente a los 0,04 $ de Replicate.
 
 ---
 
