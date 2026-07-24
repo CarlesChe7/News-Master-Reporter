@@ -1,0 +1,97 @@
+{
+  "name": "News Reporter — Error Handler",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "24c096c3-06f8-4b0f-b0e5-9d9d2219d99d",
+      "name": "Error Trigger"
+    },
+    {
+      "parameters": {
+        "chatId": "8035990227",
+        "text": "=🚨 <b>Error en News Reporter</b>\n\n📋 <b>Workflow:</b> {{ $json.workflow?.name ?? 'Desconocido' }}\n📍 <b>Nodo:</b> {{ $json.execution?.lastNodeExecuted ?? $json.error?.node?.name ?? 'Desconocido' }}\n💬 <b>Error:</b> {{ $json.execution?.error?.message ?? $json.error?.message ?? 'Sin mensaje disponible' }}\n⚡ <b>Modo:</b> {{ $json.execution?.mode ?? 'Desconocido' }}\n🕐 <b>Hora:</b> {{ new Date().toLocaleString('es-ES') }}\n\n{{ $json.execution?.url ? '🔗 ' + $json.execution.url : '<i>Revisa Executions en n8n para el detalle completo.</i>' }}",
+        "additionalFields": {
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "746ac946-54c3-4f89-bed7-360ba77068f9",
+      "name": "Telegram - Notificar error",
+      "webhookId": "b76a0339-6420-4fee-a03d-034fb8f0c91c",
+      "credentials": {
+        "telegramApi": {
+          "id": "2KM6DqBZs7wv2CN5",
+          "name": "Telegram - News Reporter Bot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "Se dispara automáticamente cuando falla cualquier ejecución del workflow principal. n8n entrega aquí el detalle del fallo: workflow, último nodo ejecutado, mensaje de error y modo de ejecución.",
+        "height": 160,
+        "width": 280
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        -224
+      ],
+      "id": "b1f0c4a2-1d3e-4a77-9c55-8e2f7a91d04b",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "Envía la notificación al chat privado de Telegram con el detalle del fallo y el enlace directo a la ejecución. Las expresiones usan fallbacks encadenados para tolerar las dos formas en que n8n puede entregar el payload de error.",
+        "height": 176,
+        "width": 300
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        176,
+        -240
+      ],
+      "id": "c7d9e5b3-4f21-4b88-a013-6d5c8e2b7f19",
+      "name": "Sticky Note1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Notificar error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "a341f686-889a-4beb-b6ee-b6dbc358ff28",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "ae27d58497989ef9381677d8fa4b9c0075d0d46157ace5225e2b75133183b1c6"
+  },
+  "id": "9YnUGWp4iWa1nBFq",
+  "tags": []
+}
