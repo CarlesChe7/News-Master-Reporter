@@ -77,7 +77,7 @@ de Telegram si algo falla durante la ejecución.
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/CarlesChe7/News-Master-Reporter.git
+git clone https://github.com/CarlesEscrichAndreu/News-Master-Reporter.git
 cd News-Master-Reporter
 
 # 2. Copiar la plantilla de variables y rellenar los valores reales
