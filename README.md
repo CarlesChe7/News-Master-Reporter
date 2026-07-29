@@ -9,9 +9,7 @@ con una arquitectura de dos agentes LLM especializados.
   <br>
   <em>Publicación generada y enviada automáticamente al canal de Telegram</em>
 </p>
-  <em>Publicación generada y enviada automáticamente al canal de Telegram</em>
-</p>
-
+ 
 ---
 
 ## El problema
